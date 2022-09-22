@@ -16,7 +16,7 @@ object ServerEntrypointTransformer {
                 val insn = iterator.next()
                 if (insn.opcode != Opcodes.NEW) continue
 
-                // TODO
+                // TODO: Implement Server Entrypoint
             }
         }
     }

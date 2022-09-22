@@ -25,4 +25,9 @@ object Hooks {
             entrypoint.initialize()
         }
     }
+
+    @JvmStatic
+    fun openWebsite() {
+        println("*OPENS WEBITE*")
+    }
 }

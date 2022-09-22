@@ -14,6 +14,7 @@ import xyz.unifycraft.uniloader.loader.api.UniLoader
 import xyz.unifycraft.uniloader.loader.impl.transform.BrandingTransformer
 import xyz.unifycraft.uniloader.loader.impl.transform.ClientEntrypointTransformer
 import xyz.unifycraft.uniloader.loader.impl.transform.ServerEntrypointTransformer
+import xyz.unifycraft.uniloader.loader.impl.transform.TitleScreenTransformer
 import java.io.File
 import java.io.FileOutputStream
 
@@ -52,6 +53,11 @@ class LoaderLaunchTransformer : LaunchTransformer {
             "net.minecraft.server.Main" -> {
                 modified = true
                 ServerEntrypointTransformer.transform(classNode)
+            }
+
+            "net.minecraft.client.gui.screen.TitleScreen" -> {
+                modified = true
+                TitleScreenTransformer.transform(classNode)
             }
         }
 
